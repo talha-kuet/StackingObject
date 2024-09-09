@@ -14,6 +14,9 @@
 		DC5BD6732C8EF05400BF198A /* StackingObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BD6722C8EF05400BF198A /* StackingObjectTests.swift */; };
 		DC5BD67D2C8EF05400BF198A /* StackingObjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BD67C2C8EF05400BF198A /* StackingObjectUITests.swift */; };
 		DC5BD67F2C8EF05400BF198A /* StackingObjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BD67E2C8EF05400BF198A /* StackingObjectUITestsLaunchTests.swift */; };
+		DC5BD68C2C8F264100BF198A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BD68B2C8F263800BF198A /* UIColor+Extension.swift */; };
+		DC5BD68E2C8F266E00BF198A /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BD68D2C8F266A00BF198A /* ARViewContainer.swift */; };
+		DC5BD6902C8F26BA00BF198A /* ARViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5BD68F2C8F26B300BF198A /* ARViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		DC5BD6782C8EF05400BF198A /* StackingObjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackingObjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5BD67C2C8EF05400BF198A /* StackingObjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackingObjectUITests.swift; sourceTree = "<group>"; };
 		DC5BD67E2C8EF05400BF198A /* StackingObjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackingObjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC5BD68B2C8F263800BF198A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		DC5BD68D2C8F266A00BF198A /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		DC5BD68F2C8F26B300BF198A /* ARViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 		DC5BD6602C8EF05100BF198A /* StackingObject */ = {
 			isa = PBXGroup;
 			children = (
+				DC5BD68F2C8F26B300BF198A /* ARViewCoordinator.swift */,
+				DC5BD68D2C8F266A00BF198A /* ARViewContainer.swift */,
+				DC5BD68B2C8F263800BF198A /* UIColor+Extension.swift */,
 				DC5BD6612C8EF05100BF198A /* AppDelegate.swift */,
 				DC5BD6632C8EF05100BF198A /* ContentView.swift */,
 				DC5BD6652C8EF05400BF198A /* Assets.xcassets */,
@@ -257,6 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5BD68C2C8F264100BF198A /* UIColor+Extension.swift in Sources */,
+				DC5BD6902C8F26BA00BF198A /* ARViewCoordinator.swift in Sources */,
+				DC5BD68E2C8F266E00BF198A /* ARViewContainer.swift in Sources */,
 				DC5BD6642C8EF05100BF198A /* ContentView.swift in Sources */,
 				DC5BD6622C8EF05100BF198A /* AppDelegate.swift in Sources */,
 			);
@@ -419,9 +431,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StackingObject/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XYSCZDXKR7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -431,13 +446,16 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.monstarlab.StackingObject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.monstarlab.mbtapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "MBT App Dev";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,9 +467,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StackingObject/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XYSCZDXKR7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -461,13 +482,16 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.monstarlab.StackingObject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.monstarlab.mbtapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "MBT App Dev";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
